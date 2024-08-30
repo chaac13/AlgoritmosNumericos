@@ -8,11 +8,11 @@ void forwardSubstitution(int dim, float** L, float* B, float* y);
 void backwardSubstitution(int dim, float** U, float* y, float* X);
 void imprimirSolucoes(int dim, float* X, const char* nomeMetodo);
 
-int main() {
+int main(int argc, char *argv[]) {
     int N_SISTEMAS, DIMENSAO;
     float PRECISAO;
 
-    FILE *arquivo = fopen("Listing1.txt", "r");
+    FILE *arquivo = fopen(argv[1], "r");
     if (arquivo == NULL) {
         printf("Erro ao abrir o arquivo.\n");
         return 1;
